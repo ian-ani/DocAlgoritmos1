@@ -19,5 +19,10 @@ public class Prueba {
         System.out.printf("Número: %d | Dígitos diferentes: %d\n", anno3.getNumero(),anno3.digitosDiferentes());
         System.out.printf("Número: %d | Dígitos diferentes: %d\n", anno4.getNumero(),anno4.digitosDiferentes());
         System.out.printf("Número: %d | Dígitos diferentes: %d\n", anno5.getNumero(),anno5.digitosDiferentes());
+
+        // Prueba con DividirFactorial
+        DividirFactorial factorial = new DividirFactorial(6, 3);
+
+        System.out.printf("%s = %d", factorial.toString(), factorial.division());
     }
 }
