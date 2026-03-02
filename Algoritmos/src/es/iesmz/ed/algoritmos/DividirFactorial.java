@@ -1,7 +1,9 @@
 package es.iesmz.ed.algoritmos;
 
-import java.util.HashSet;
-import java.util.Set;
+/**
+ * Clase DividirFactorial para obtener la división entre un numerador y un denominador con combinatoria.
+ * @author Iris Auñón Navarro
+ */
 
 public class DividirFactorial {
     /* ATRIBUTOS */
@@ -14,7 +16,7 @@ public class DividirFactorial {
     /**
      * Constructor para guardar el año a comprobar.
      * @param numerador long; recibe el numerador de la división.
-     * @param denominador long; recibe el denominador/divisor de la división.
+     * @param denominador long; recibe el denominador de la división.
      */
 
     public DividirFactorial(long numerador, long denominador) {
@@ -65,8 +67,8 @@ public class DividirFactorial {
     /* METODO TOSTRING */
 
     /**
-     * Método toString. Para poder mostrar el año guardado.
-     * @return String; muestra el año.
+     * Método toString. Muestra numerador y denominador.
+     * @return String; Numerador y denominador con formato.
      */
 
     @Override
