@@ -21,6 +21,8 @@ public class Hyperpar {
         this.numero = numero;
     }
 
+    /* GETTERS */
+
     /**
      * Método que devuelve el número del objeto.
      * @return numero: long; devuelve el número a comprobar.
@@ -30,6 +32,8 @@ public class Hyperpar {
         return numero;
     }
 
+    /* SETTERS */
+
     /**
      * Método que cambia el valor del número.
      * @param numero long; cambia el número actual por otro número.
@@ -38,6 +42,8 @@ public class Hyperpar {
     public void setNumero(long numero) {
         this.numero = numero;
     }
+
+    /* METODO TOSTRING */
 
     /**
      * Método toString. Para poder mostrar el número guardado.
