@@ -73,16 +73,19 @@ public class Anno {
         // Crear un set (no acepta repetidos! :))
         Set<Long> digitos = new HashSet<>();
 
+        // Copia del numero original para no sobreescribirlo
+        long tmp = numero;
+
         // Guardar los digitos en el set
-        while (numero > 0) {
+        while (tmp > 0) {
             // Obtener el ultimo digito del numero
-            long tmp = numero % 10;
+            long ultimo = tmp % 10;
 
             // Guardar en el set
-            digitos.add(tmp);
+            digitos.add(ultimo);
 
             // El numero 'pierde' un digito
-            numero = numero / 10;
+            tmp = tmp / 10;
         }
 
         // El tamano del set es el numero de digitos que hay
