@@ -1,7 +1,9 @@
 package es.iesmz.ed.algoritmos;
 
-import java.util.HashSet;
+/* LIBRERIAS */
+
 import java.util.Set;
+import java.util.HashSet;
 
 /**
  * Clase Anno que comprueba si todos los dígitos de un número son diferentes o si hay alguno que coincide con otro,
@@ -60,63 +62,29 @@ public class Anno {
 
     /* OTROS METODOS */
 
+    /**
+     * Método digitosDiferentes. Permite calcular el número de dígitos diferentes dentro de un número, en este caso
+     * en un año.
+     * @return int; devuelve el número de dígitos diferentes.
+     */
+
     public int digitosDiferentes() {
-        // Guarda cuantos numeros se han repetido
-        int total = 0;
+        // Crear un set (no acepta repetidos! :))
+        Set<Long> digitos = new HashSet<>();
 
-        // Obtener el largo original
-        int largoOriginal = String.valueOf(numero).length();
-
-        // Crear un set
-        Set<Long> largoNuevo = new HashSet<>();
-
-        // Guardar los numeros en un set (no admite repetidos! :))
+        // Guardar los digitos en el set
         while (numero > 0) {
             // Obtener el ultimo digito del numero
             long tmp = numero % 10;
 
             // Guardar en el set
-            largoNuevo.add(tmp);
+            digitos.add(tmp);
 
             // El numero 'pierde' un digito
             numero = numero / 10;
         }
 
-        // Comprobar si el largo ha cambiado
-        if (largoOriginal != largoNuevo.size()) {
-            
-        }
-
-
-        /*// Declarar array de 'numeros' de tipo int teniendo como tamano el largo del numero (pasado a String)
-        long[] numeros = new long[String.valueOf(numero).length()];
-        // Variable usada como indice para el bucle while
-        int i = 0;
-
-        // Guarda cuantos numeros se han repetido
-        int total = 0;
-
-        while (numero > 0) {
-            // Obtener el ultimo digito del numero
-            long tmp = numero % 10;
-
-            // Guardar numeros en el array
-            numeros[i] = tmp;
-
-            // Incrementar variable de cuenta (para guardar en el array)
-            i++;
-
-            // El numero 'pierde' un digito
-            numero = numero / 10;
-        }
-
-        // Recorrer array de numeros con cada digito
-        for (int j = 0; j < numeros.length; j++) {
-            if () {
-
-            }
-        }
-
-        return total;*/
+        // El tamano del set es el numero de digitos que hay
+        return digitos.size();
     }
 }
