@@ -1,0 +1,47 @@
+# Imagenes
+
+*.jpg
+*.jpeg
+*.png
+
+# Carpetas
+
+BaseDatos
+Ingles
+LengMarcas
+Sistemas
+__MACOSX
+doc-coche
+
+# Otros archivos
+
+*.pdf
+*.txt
+*.drawio
+*.zip
+*.odt
+
+# Binarios de Java
+
+*.class
+*.classpath
+
+# IntelliJ
+
+.idea
+out
+*.iml
+
+# VSCode
+
+.vscode
+
+# Eclipse
+
+.settings
+
+# Otros archivos específicos
+Entornos/Tema_02/Tasca1_debug/TascaDepuracion1-iris/META-INF/MANIFEST.MF
+programacionDam/
+sync.ffs_db
+*.docx
