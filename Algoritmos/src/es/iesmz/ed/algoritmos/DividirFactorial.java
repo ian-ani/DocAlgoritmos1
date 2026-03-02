@@ -71,10 +71,31 @@ public class DividirFactorial {
 
     @Override
     public String toString() {
-        return String.format("%d / %d", numerador, denominador);
+        return String.format("%d! / %d!", numerador, denominador);
     }
 
     /* OTROS METODOS */
 
+    /**
+    * Método division. Devuelve la división entre n! / k! (sin dividir).
+    * @return long; resultado de n! / k! con combinatoria.
+    */
 
+    public long division() {
+        // n! / (k! * (n - k)!)
+        // Pero los factoriales se hacen muy grandes, computacionalmente es horrendo
+        // Entonces se simplifica la expresion donde si 6! / 3! se elimina lo 'comun' que tienen ambos
+        // 6,5,4,3,2,1 y 3,2,1 -> se elimina 3,2,1 y nos quedamos con 6,5,4 que pasa a 6 * 5 * 4 = 120
+
+        // No hace falta calcular el 0, asi que se puede empezar desde 1
+        long res = 1;
+
+        // Empieza en el numerador y baja hasta el denominador, de 1 en 1
+        // Si n = 6!, k = 3! pasa por 6,5,4 y llega hasta 3 (no incluido)
+        for (long i = numerador; i > denominador; i--) {
+            res *= i;
+        }
+
+        return res;
+    }
 }
