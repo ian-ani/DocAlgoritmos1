@@ -88,7 +88,7 @@ public class Anno {
             tmp = tmp / 10;
         }
 
-        // El tamano del set es el numero de digitos que hay
+        // El tamano del set es el numero de digitos diferentes que hay
         return digitos.size();
     }
 }
