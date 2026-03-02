@@ -69,23 +69,26 @@ public class Hyperpar {
         // Variable usada como indice para el bucle while
         int i = 0;
 
-        // Copia de 'numero'
+        // Copia de 'numero' para no reemplazar el numero real
         long tmp = numero;
 
-        // Mientras 'tmp' sea mayor a 0
+        // Mientras 'tmp' sea mayor a 0 (tmp es la copia del numero real)
         while (tmp > 0) {
-            // Se divide el numero entre 10 para discriminar la parte decimal
-            tmp = tmp / 10;
+            // Guardar el ultimo digito
+            long digito = tmp % 10;
 
             // Comprobar si es divisible entre 2 (par) o no, si lo es guardar el booleano en el array
-            if (tmp % 2 == 0) {
+            if (digito % 2 == 0) {
                 numeros[i] = true;
             } else {
                 numeros[i] = false;
             }
 
-            // Incrementar variable de cuenta
+            // Incrementar variable de cuenta (para guardar en el array)
             i++;
+
+            // Se divide el numero entre 10 para discriminar la parte decimal
+            tmp = tmp / 10;
         }
 
         // Recorrer array de numeros con valores booleanos
