@@ -64,8 +64,8 @@ public class Hyperpar {
      */
 
     public boolean esHyperPar() {
-        // Declarar array de 'numeros' de tipo booleano teniendo como tamano el largo del numero (pasado a String)
-        boolean[] numeros = new boolean[String.valueOf(numero).length()];
+        // Declarar array de 'digitos' de tipo booleano teniendo como tamano el largo del numero (pasado a String)
+        boolean[] digitos = new boolean[String.valueOf(numero).length()];
         // Variable usada como indice para el bucle while
         int i = 0;
 
@@ -79,9 +79,9 @@ public class Hyperpar {
 
             // Comprobar si es divisible entre 2 (par) o no, si lo es guardar el booleano en el array
             if (digito % 2 == 0) {
-                numeros[i] = true;
+                digitos[i] = true;
             } else {
-                numeros[i] = false;
+                digitos[i] = false;
             }
 
             // Incrementar variable de cuenta (para guardar en el array)
@@ -92,9 +92,9 @@ public class Hyperpar {
         }
 
         // Recorrer array de numeros con valores booleanos
-        for (int j = 0; j < numeros.length; j++) {
+        for (int j = 0; j < digitos.length; j++) {
             // En el primer momento que encuentra un numero impar, retorna 'false' porque ya no es hyperpar
-            if (!numeros[j]) {
+            if (!digitos[j]) {
                 return false;
             }
         }
