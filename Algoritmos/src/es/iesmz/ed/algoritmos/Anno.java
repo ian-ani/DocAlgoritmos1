@@ -22,6 +22,7 @@ public class Anno {
      * Constructor para guardar el año a comprobar.
      * @param numero long; este parámetro recibe el año a comprobar.
      */
+
     public Anno(long numero) {
         this.numero = numero;
     }
